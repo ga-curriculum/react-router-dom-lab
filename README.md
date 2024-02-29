@@ -1,8 +1,8 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![React Router DOM Lab](./assets/tktk-hero.png)
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module. Introduce the lab. What will the students build in this lab?
+In this lab, you will build an application that simulates a post office, where users can create new mailboxes, view a list of all mailboxes, and explore details about each mailbox. In completing this lab, you will utilize several client-side routing tools provided by `react-router-dom`.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ tktk If there is not a starter code repo that students will fork and clone to st
 
 ## Level Up
 
-🚀 [Level Up](./level-up/README.md) tktk - remove section if no level ups exist.
+🚀 [Level Up](./level-up/README.md)
 
 ## Solution code
 

@@ -1,4 +1,4 @@
-# ![[tktk Module Name] - Setup](./assets/hero.png)
+# ![React Router DOM Lab - Setup](./assets/hero.png)
 
 ## Setup
 
@@ -8,33 +8,50 @@ Open your Terminal application and navigate to your `~/code/ga/labs` directory:
 cd ~/code/ga/labs
 ```
 
-<!-- tktk if starter code exists -->
-
-Fork the [[tktk Repo Name]](https://git.generalassemb.ly/modular-curriculum-all-courses/[tktk Repo Name]) repository.
-
-<!-- tktk if starting from scratch  -->
-
-Make a new repository on [GitHub](https://github.com/) named [tktk Repo Name].
-
-<!-- tktk -->
+Make a new repository on [GitHub](https://github.com/) named `react-router-dom-lab`.
 
 Clone a copy of your remote repo locally by using the `git clone` command:
 
 ```bash
-git clone https://github.com/<your-username>/[tktk Repo Name].git [tktk Personal GitHub for new labs]
-git clone https://git.generalassemb.ly/<your-username>/[tktk Repo Name].git [tktk GA enterprise GitHub for starter code]
+git clone https://github.com/<your-username>/react-router-dom-lab.git
 ```
 
 > 📚 Note: In the link above, where it says `<your-username>`, you should see the username from your GitHub account.
 
-Next, `cd` into your new cloned directory, `[tktk Repo Name]`:
+Next, `cd` into your new cloned directory, `react-router-dom-lab`:
 
 ```bash
-cd [tktk Repo Name]
+cd react-router-dom-lab
 ```
 
 Open the project's folder in your code editor:
 
 ```bash
 code .
+```
+
+Run the following command to install `react-router-dom`:
+
+```bash
+npm i react-router-dom
+```
+
+Create a directory called `components` within `src`:
+
+```bash
+mkdir src/components
+```
+
+And finally, replace the contents of `src/App.jsx` with the following:
+
+```jsx
+// src/App.jsx
+const App = () => {
+  return (
+    <>
+    </>
+  )
+}
+
+export default App
 ```
