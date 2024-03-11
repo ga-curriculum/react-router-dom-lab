@@ -2,13 +2,19 @@
 
 ## Overview
 
-![tktk Hunter - screenshots of app]()
-
 In this lab, you will build an application that simulates a post office, where users can create new mailboxes, view a list of all mailboxes, and explore details about each mailbox. In completing this lab, you will utilize several client-side routing tools provided by `react-router-dom`.
+
+Here are a few screenshots to reference as you work through this exercise:
+
+![List page](./assets/list.png)
+
+![Details page](./assets/details.png)
+
+![New page](./assets/new-mailbox.png)
 
 Take a look at the component hierarchy diagram below for a sense of how this application will be structured:
 
-![tktk Hunter](./assets/placeholder-chd.png) 
+![Component hierarchy diagram](./assets/chd.png) 
 
 In the list below, you'll find a brief description of the role of each component in our app:
 
@@ -82,11 +88,11 @@ Your primary goal is to implement the user stories listed above. To get started,
 
     ```jsx
     const mailboxExample = {
-      _id: 0, boxSize: 'Small', boxholder: 'Alex',
+      _id: 1, boxSize: 'Small', boxholder: 'Alex',
     };
     ```
 
-2. New mailboxes should receive a box number or `_id` property automatically. A good place to handle this would be the `addBox` function in `src/App.jsx`. The value of the `_id` property can be derived from the current `length` of `mailboxes` state. This value can be added to the submitted form data before the object is set in state.
+2. New mailboxes should receive a box number or `_id` property automatically. A good place to handle this would be the `addBox` function in `src/App.jsx`. The value of the `_id` property can be derived by adding 1 to the current `length` of `mailboxes` state (`mailboxes.length + 1;`). This value can be added to the submitted form data before the object is set in state.
 
 3. When building out `src/components/MailboxDetails.jsx`, the `useParams()` hook should be useful. You can use the value extracted from the URL params to `find()` a specific mailbox in `mailboxes` state. 
 

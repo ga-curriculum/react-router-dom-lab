@@ -1,4 +1,4 @@
-# ![React Router DOM Lab](./assets/tktk-hero.png)
+# ![React Router DOM Lab](./assets/hero.png)
 
 ## About
 

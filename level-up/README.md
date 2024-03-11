@@ -4,6 +4,14 @@
 
 In this level up, you will add the functionality for creating and reading letters within the post office app.
 
+Take a look at the screenshots below as reference:
+
+![New letter page](./assets/new-letter-level-up.png)
+
+![Details page](./assets/details-level-up.png)
+
+## User stories
+
 Here are the user stories to guide you through the process:
 
 1. Create a new component called `LetterForm.jsx` and import it at the top of `src/App.jsx`.
