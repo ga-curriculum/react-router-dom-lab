@@ -1,22 +1,26 @@
 # ![React Router DOM Lab](./assets/hero.png)
 
+Welcome to Reactville, a constantly evolving virtual metropolis. Let's build this digital town together, one component at a time.
+
+![Reactville Banner](./assets/reactville.png)
+
 ## About
 
-In this lab, you will build an application that simulates a post office, where users can create new mailboxes, view a list of all mailboxes, and explore details about each mailbox. In completing this lab, you will utilize several client-side routing tools provided by `react-router-dom`.
+Welcome to Reactville's local post office! In this lab, you'll develop an application that simulates the management of post office boxes. Features will include creating new mailboxes, viewing a list of all mailboxes, and exploring individual mailbox details. 
+
+![Solution UI Example](./assets/solution-ui-1.png)
+
+Throughout the lab, you'll use client-side routing tools from `react-router-dom` to navigate between different components. This approach allows your single-page application to function more like a traditional multi-page website, improving the user experience by providing distinct navigable pages without full page reloads.
 
 ## Prerequisites
 
-- tktk
+- Controlled Forms in React
+- Lifting State in React
+- React Router DOM
 
 ## Time to complete
 
-Estimated time to complete core lab exercise: **tktk min**
-
-## Starter code
-
-tktk If there is not a starter code repo that students will fork and clone to start this lab, then this section and all of its content should be removed.
-
-🟢 [Starter code](#tktk-repository-for-starter-code)
+Estimated time to complete core lab exercise: **2 hrs**
 
 ## Content
 
@@ -29,15 +33,7 @@ tktk If there is not a starter code repo that students will fork and clone to st
 
 ## Solution code
 
-🏁 [tktk Solution code](#tktk-external-repo-link-url)
-
-## Deployed sites
-
-tktk If there is not a deployed site related to this module this section and all of its content should be removed.
-
-🌐 [Live site](#tktk-deployed-app-url)
-
-🐙 [Repository](#tktk-repository-for-deployed-app)
+🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/react-router-dom-lab-solution)
 
 ## Internal resources
 
