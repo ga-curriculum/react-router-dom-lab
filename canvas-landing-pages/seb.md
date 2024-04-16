@@ -12,12 +12,6 @@ Welcome to Reactville's local post office! In this lab, you'll develop an applic
 
 Throughout the lab, you'll use client-side routing tools from `react-router-dom` to navigate between different components. This approach allows your single-page application to function more like a traditional multi-page website, improving the user experience by providing distinct navigable pages without full page reloads.
 
-## Prerequisites
-
-- Controlled Forms in React
-- Lifting State in React
-- React Router DOM
-
 ## Time to complete
 
 Estimated time to complete core lab exercise: **2 hrs**
