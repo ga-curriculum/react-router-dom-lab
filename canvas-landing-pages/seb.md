@@ -6,7 +6,7 @@ Welcome to Reactville, a constantly evolving virtual metropolis. Let's build thi
 
 ## About
 
-Welcome to Reactville's local post office! In this lab, you'll develop an application that simulates the management of post office boxes. Features will include creating new mailboxes, viewing a list of all mailboxes, and exploring individual mailbox details. 
+Welcome to Reactville's local post office! In this lab, you'll develop an application that simulates the management of post office boxes. Features will include creating new mailboxes, viewing a list of all mailboxes, and exploring individual mailbox details.
 
 ![Solution UI Example](../assets/solution-ui-1.png)
 
