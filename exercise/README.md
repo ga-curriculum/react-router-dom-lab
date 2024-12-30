@@ -1,8 +1,13 @@
-# ![React Router DOM Lab - Exercise](./assets/hero.png)
+<h1>
+  <span class="headline">React Router DOM Lab</span>
+  <span class="subhead">Exercise</span>
+</h1>
 
 ## Overview
 
-In this lab, you will build an application that simulates a post office, where users can create new mailboxes, view a list of all mailboxes, and explore details about each mailbox. In completing this lab, you will utilize several client-side routing tools provided by `react-router-dom`.
+In this lab, you will build an application that simulates a post office, where users can create new mailboxes, view a list of all mailboxes, and explore details about each mailbox.
+
+You will utilize several client-side routing tools provided by React Router's library to complete this lab.
 
 Here are a few screenshots to reference as you work through this exercise:
 
@@ -34,7 +39,7 @@ Here are the user stories for this lab:
 
 - As a user, clicking on the 'New Mailbox' link should navigate me to a page with a form for submitting new mailboxes.
 
-- As a user, when viewing the form on the 'New Mailbox' page, I should see a `<form>` with an `<input>` for the name of the `boxholder` and a `<select>` menu for the `boxsize`. The `<select>` menu should include three options: 'Small', 'Medium', and 'Large'.
+- As a user, when viewing the form on the 'New Mailbox' page, I should see a `<form>` with an `<input>` for the name of the `boxOwner` and a `<select>` menu for the `boxSize`. The `<select>` menu should include three options: 'Small', 'Medium', and 'Large'.
 
 - As a user, I should not be required to select a box number when creating a new mailbox. When a new mailbox is created, it should be assigned a box number, or `_id`, automatically. This number should increment based on the number of mailboxes that already exist.
 
@@ -46,7 +51,7 @@ Here are the user stories for this lab:
 
 - As a user, when viewing the 'Mailboxes' list page, I want to be able to click on a mailbox, and be directed to a mailbox details page.
 
-- As a user, when viewing the details page, I should see details about a specific mailbox. The details should include the box number (`_id`), the name of the boxholder, and the box size.
+- As a user, when viewing the details page, I should see details about a specific mailbox. The details should include the box number (`_id`), the name of the box owner, and the box size.
 
 - As a user, I should see the message 'Mailbox Not Found!' if I navigate to the details page for a mailbox that does not exist.
 
@@ -58,12 +63,12 @@ To get started, follow the steps below:
 
 1. Start by creating each of the components listed below. After creating each component, be sure to import them at the top of `src/App.jsx`.
 
-   - `src/components/NavBar.jsx`
-   - `src/components/MailboxForm.jsx`
-   - `src/components/MailboxList.jsx`
-   - `src/components/MailboxDetails.jsx`
+   - `src/components/NavBar/NavBar.jsx`
+   - `src/components/MailboxForm/MailboxForm.jsx`
+   - `src/components/MailboxList/MailboxList.jsx`
+   - `src/components/MailboxDetails/MailboxDetails.jsx`
 
-2. Within `NavBar.jsx`, import `Link` from `react-router-dom` and create a `<Link>` for each destination in the table below:
+2. Within `NavBar.jsx`, import `Link` from `react-router` and create a `<Link>` for each destination in the table below:
 
    | Destination | `to`           | Text Content |
    | ----------- | -------------- | ------------ |
@@ -71,7 +76,7 @@ To get started, follow the steps below:
    | MailboxList | `/mailboxes`   | Mailboxes    |
    | MailboxForm | `/new-mailbox` | New Mailbox  |
 
-3. In `App.jsx`, import `Route` and `Routes` from `react-router-dom` and create a `<Route>` for each destination in the table below:
+3. In `App.jsx`, import `Route` and `Routes` from `react-router` and create a `<Route>` for each destination in the table below:
 
    | Destination    | `path`                  | `element`                           |
    | -------------- | ----------------------- | ----------------------------------- |
@@ -88,11 +93,11 @@ To get started, follow the steps below:
 
 1. The `mailboxes` `useState` variable will be used to store an array of objects, each object representing a mailbox. Each mailbox object should adhere to the shape outlined below:
 
-   ```jsx
-   const mailboxExample = {
+   ```javascript
+   {
      _id: 1,
      boxSize: 'Small',
-     boxholder: 'Alex',
+     boxOwner: 'Alex',
    };
    ```
 
@@ -101,14 +106,15 @@ To get started, follow the steps below:
 3. When building out `MailboxDetails.jsx`, the `useParams()` hook will be useful. You can use the value extracted from the URL params to `find()` a specific mailbox in `mailboxes` state.
 
    ```jsx
-   // src/components/MailboxDetails.jsx
+   // src/components/MailboxDetails/MailboxDetails.jsx
 
    const { mailboxId } = useParams();
-   const selectedBox = props.mailboxes.find(
-     (mailbox) => mailbox._id === Number(mailboxId)
-   );
+   const selectedBox = props.mailboxes.find((mailbox) => (
+      mailbox._id === Number(mailboxId)
+   ));
    ```
 
 4. From the user stories:
-- "Each mailbox in the list should be a *square container* with a box number `_id`."  
-- We've included a CSS class called `.mail-box`, where should you place it?
+
+   - "Each mailbox in the list should be a *square container* with a box number `_id`."
+   - We've included a CSS class called `.mail-box`, where should you place it?

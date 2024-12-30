@@ -1,4 +1,7 @@
-# ![React Router DOM Lab - Level Up](./assets/hero.png)
+<h1>
+  <span class="headline">React Router DOM Lab</span>
+  <span class="subhead">Send and Receive Letters</span>
+</h1>
 
 ## Overview
 
@@ -10,7 +13,7 @@ Take a look at the screenshots below as reference:
 
 ![Details page](./assets/details-level-up.png)
 
-## User stories
+## Exercise
 
 Here are the user stories to guide you through the process:
 
@@ -36,22 +39,23 @@ Here are the user stories to guide you through the process:
 
 1. The `letters` `useState` variable will be used to store an array of objects, each object representing a letter. Each letter object should adhere to the shape outlined below:
 
-```jsx
-const letterExample = {
-  mailboxId: 0,
-  recipient: '',
-  message: '',
-};
-```
+   ```javascript
+   {
+     mailboxId: 0,
+     recipient: '',
+     message: '',
+   };
+   ```
 
-2. To enable your users to `<select>` a mailbox when writing a letter, you will want to pass `mailboxes` state down to `src/components/LetterForm.jsx`, and use the `map()` method to generate a collection of `<option>` tags within the `<select>` menu.
+2. To enable your users to `<select>` a mailbox when writing a letter, you will want to pass `mailboxes` state down to `src/components/LetterForm/LetterForm.jsx`, and use the `map()` method to generate a collection of `<option>` tags within the `<select>` menu.
 
-3. The `useParams()` hook should be useful for displaying the `letters` of a particular mailbox in `src/components/MailboxDetails.jsx` You can use the value extracted from the URL params to `find()` a specific mailbox in `mailboxes` state.
+3. The `useParams()` hook should be useful for displaying the `letters` of a particular mailbox in `src/components/MailboxDetails/MailboxDetails.jsx` You can use the value extracted from the URL params to `find()` a specific mailbox in `mailboxes` state.
 
-```jsx
-// src/components/MailboxDetails.jsx
-const { mailboxId } = useParams();
-const selectedLetters = props.letters.filter(
-  (letter) => letter.mailboxId === Number(mailboxId)
-);
-```
+   ```jsx
+   // src/components/MailboxDetails/MailboxDetails.jsx
+
+     const { mailboxId } = useParams();
+     const selectedLetters = props.letters.filter((letter) => (
+       letter.mailboxId === Number(mailboxId)
+     ));
+   ```
