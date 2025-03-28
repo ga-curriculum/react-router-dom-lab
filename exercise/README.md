@@ -9,6 +9,18 @@ In this lab, you will build an application that simulates a post office, where u
 
 You will utilize several client-side routing tools provided by React Router's library to complete this lab.
 
+### What is a mailbox in this lab?
+
+Each "mailbox" in this lab represents a type of post office box, often called a **PO Box**.
+
+A **PO Box** (short for "Post Office Box") is a secure, numbered box located at a post office where people can receive mail. These boxes are rented by individuals or businesses who want a private or reliable way to get their mail. Only the box owner has access to their assigned box.
+
+In this lab, each mailbox will have:
+
+- A unique box number (`_id`)
+- The name of the box owner (`boxOwner`)
+- The size of the box (`boxSize`), such as Small, Medium, or Large
+
 Here are a few screenshots to reference as you work through this exercise:
 
 ![List page](./assets/list.png)
@@ -34,25 +46,15 @@ In the list below, you'll find a brief description of the role of each component
 Here are the user stories for this lab:
 
 - As a user, I should see a nav bar with links at the top of each page in the application.
-
 - As a user, clicking on the 'Home' link should navigate me to a landing page that displays the text 'Post Office'.
-
 - As a user, clicking on the 'New Mailbox' link should navigate me to a page with a form for submitting new mailboxes.
-
 - As a user, when viewing the form on the 'New Mailbox' page, I should see a `<form>` with an `<input>` for the name of the `boxOwner` and a `<select>` menu for the `boxSize`. The `<select>` menu should include three options: 'Small', 'Medium', and 'Large'.
-
 - As a user, I should not be required to select a box number when creating a new mailbox. When a new mailbox is created, it should be assigned a box number, or `_id`, automatically. This number should increment based on the number of mailboxes that already exist.
-
-- As a user, when I submit a the 'New Mailbox' form, I should be redirected to the 'Mailboxes' page (`/mailboxes`) where I will see the newly created mailbox added to the list.
-
+- As a user, when I submit the 'New Mailbox' form, I should be redirected to the 'Mailboxes' page (`/mailboxes`) where I will see the newly created mailbox added to the list.
 - As a user, clicking on the 'Mailboxes' link should navigate me to a 'Mailboxes' page.
-
 - As a user, when viewing the 'Mailboxes' page, I should be able to see a list of all the existing mailboxes. Each mailbox in the list should be a square container with a box number `_id`.
-
 - As a user, when viewing the 'Mailboxes' list page, I want to be able to click on a mailbox, and be directed to a mailbox details page.
-
 - As a user, when viewing the details page, I should see details about a specific mailbox. The details should include the box number (`_id`), the name of the box owner, and the box size.
-
 - As a user, I should see the message 'Mailbox Not Found!' if I navigate to the details page for a mailbox that does not exist.
 
 ## Lab exercise
@@ -109,12 +111,12 @@ To get started, follow the steps below:
    // src/components/MailboxDetails/MailboxDetails.jsx
 
    const { mailboxId } = useParams();
-   const selectedBox = props.mailboxes.find((mailbox) => (
-      mailbox._id === Number(mailboxId)
-   ));
+   const selectedBox = props.mailboxes.find(
+     (mailbox) => mailbox._id === Number(mailboxId)
+   );
    ```
 
 4. From the user stories:
 
-   - "Each mailbox in the list should be a *square container* with a box number `_id`."
+   - "Each mailbox in the list should be a _square container_ with a box number `_id`."
    - We've included a CSS class called `.mail-box`, where should you place it?
