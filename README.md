@@ -35,7 +35,7 @@ Estimated time to complete core lab exercise: **2 hrs**
 
 ### Solution code
 
-🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/react-router-dom-lab-solution)
+🏁 [Solution code](https://github.com/ga-curriculum/react-router-dom-lab-solution)
 
 ### Course landing pages
 
